@@ -1369,7 +1369,8 @@ chrome.cast.cordova = {
 
 execute('setup', function (err, args) {
     if (err) {
-        throw new Error('cordova-plugin-chromecast: Unable to setup chrome.cast API' + err);
+        console.error('cordova-plugin-chromecast: Unable to setup chrome.cast API' + err);
+        return;
     }
     if (args === 'OK') {
         return;
